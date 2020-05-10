@@ -1,0 +1,1 @@
+docker run --rm -v "$PWD":/usr/src/mymaven -v "$HOME/.m2":/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock -w /usr/src/mymaven -e TZ=America/New_York maven:latest mvn clean install -D selenium.browser.isGrid=true -D cucumber.filter.tags="@adminSignIn" -D parallelTestsCount=7 -D selenium.grid.url=http://100.2.147.200:4444
